@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class FeedListViewController: UITableViewController, XMLParserDelegate {
+    
+    var lentaRuFeeds = Feeds()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        setUpTableView()
+
+        loadData()
     }
-
-
 }
-
